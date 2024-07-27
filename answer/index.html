@@ -1,0 +1,21 @@
+<head>
+  <meta http-equiv="refresh" content="4; URL='/challenges" />
+</head>
+
+<script>
+  const queryString = window.location.search;
+
+  const urlParams = new URLSearchParams(queryString);
+
+  const answer = urlParams.get('answer')
+
+  if (answer && (answer.toLowerCase().replace("bcpt23{", "").replace("}", "") == "strauss")) {
+    window.location.href = "/answer/strauss.html";
+  } else {
+    if (answer && (answer.indexOf("bcpt23{") > -1) && (answer.indexOf("}") > -1)) {
+      window.location.href = "/challenges?answer=" + answer;
+    } else {
+      window.location.href = "/challenges";
+    }
+  }
+</script>

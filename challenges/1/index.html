@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+	
+	<meta charset="utf-8">
+	<title>Challenge: QR Codes - BSides Cape Town</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- ================== BEGIN core-css ================== -->
+	<link href="/assets/css/vendor.min.css" rel="stylesheet">
+	<link href="/assets/css/app.min.css" rel="stylesheet">
+	<!-- ================== END core-css ================== -->
+
+	<!-- ================== BEGIN page-css ================== -->
+	<!-- ================== END page-css ================== -->
+	
+</head>
+<body>
+	<!-- BEGIN #app -->
+	<div id="app" class="app">
+		<!-- BEGIN #header -->
+		<div id="header" class="app-header">
+			<!-- BEGIN desktop-toggler -->
+			<div class="desktop-toggler">
+				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-collapsed" data-dismiss-class="app-sidebar-toggled" data-toggle-target=".app">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+			</div>
+			<!-- BEGIN desktop-toggler -->
+
+			<!-- BEGIN mobile-toggler -->
+			<div class="mobile-toggler">
+				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-mobile-toggled" data-toggle-target=".app">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+			</div>
+			<!-- END mobile-toggler -->
+
+			<!-- BEGIN brand -->
+			<div class="brand">
+				<a href="" class="brand-logo">
+					<span class="brand-text">BSides 2023 Scavenger Hunt</span>
+				</a>
+			</div>
+			<!-- END brand -->
+
+			<!-- BEGIN menu -->
+			<div class="menu">
+				<!-- <div class="menu-item dropdown dropdown-mobile-full">
+					<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
+						<div class="menu-icon"><i class="bi bi-bell nav-icon"></i></div>
+						<div class="menu-badge bg-theme"></div>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end mt-1 w-300px fs-11px pt-1">
+						<h6 class="dropdown-header fs-10px mb-1">NOTIFICATIONS</h6>
+						<div class="dropdown-divider mt-1"></div>
+						<a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
+							<div class="fs-20px w-20px">
+								<i class="bi bi-person-circle text-theme"></i>
+							</div>
+							<div class="flex-1 flex-wrap ps-3">
+								<div class="mb-1 text-white">YOU HAVE TAKEN THE LEAD!</div>
+								<div class="small">JUST NOW</div>
+							</div>
+							<div class="ps-2 fs-16px">
+								<i class="bi bi-chevron-right"></i>
+							</div>
+						</a>
+						<a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
+							<div class="fs-20px w-20px">
+								<i class="bi bi-grid text-theme"></i>
+							</div>
+							<div class="flex-1 flex-wrap ps-3">
+								<div class="mb-1 text-white">NEW CHALLENGE UNLOCKED</div>
+								<div class="small">2 MINUTES AGO</div>
+							</div>
+							<div class="ps-2 fs-16px">
+								<i class="bi bi-chevron-right"></i>
+							</div>
+						</a>
+						<hr class="bg-white-transparent-5 mb-0 mt-2">
+						<div class="py-10px mb-n2 text-center">
+							<a href="#" class="text-decoration-none fw-bold">SEE ALL</a>
+						</div>
+					</div>
+				</div> -->
+				<div class="menu-item dropdown dropdown-mobile-full">
+					<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
+						<div class="menu-text d-sm-block d-none">LOGIN&nbsp;&nbsp;</div>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end me-lg-3 fs-11px mt-1">
+						<a class="dropdown-item d-flex align-items-center" href="/login-discord">WITH DISCORD <i class="fab fa-lg fa-fw me-2 fa-discord ms-auto text-theme fs-16px my-n1"></i></a>
+						<a class="dropdown-item d-flex align-items-center" href="/login-email">WITH EMAIL <i class="fas fa-lg fa-fw me-2 fa-envelope ms-auto text-theme fs-16px my-n1"></i></a>
+					</div>
+
+					</div>
+			</div>
+			<!-- END menu -->
+
+			<!-- BEGIN menu-search -->
+			<form class="menu-search" method="POST" name="header_search_form">
+				<div class="menu-search-container">
+					<div class="menu-search-icon"><i class="bi bi-search"></i></div>
+					<div class="menu-search-input">
+						<input type="text" class="form-control form-control-lg" placeholder="Search menu...">
+					</div>
+					<div class="menu-search-icon">
+						<a href="#" data-toggle-class="app-header-menu-search-toggled" data-toggle-target=".app"><i class="bi bi-x-lg"></i></a>
+					</div>
+				</div>
+			</form>
+			<!-- END menu-search -->
+		</div>
+		<!-- END #header -->
+
+		<!-- BEGIN #sidebar -->
+		<div id="sidebar" class="app-sidebar">
+			<!-- BEGIN scrollbar -->
+			<div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+				<!-- BEGIN menu -->
+				<div class="menu">
+					<div class="menu-header">Navigation</div>
+					<div class="menu-item">
+						<a href="/" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-house"></i></span>
+							<span class="menu-text">Home</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="/login-discord" class="menu-link">
+							<span class="menu-icon"><i class="fab fa fa-discord"></i></span>
+							<span class="menu-text">Login with Discord</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="/login-email" class="menu-link">
+							<span class="menu-icon"><i class="fa fa-envelope"></i></span>
+							<span class="menu-text">Login with Email</span>
+						</a>
+					</div>
+					
+
+					<div class="menu-item">
+						<a href="/scoreboards" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-trophy"></i></span>
+							<span class="menu-text">Scoreboard</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="/challenges" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-ticket-perforated"></i></span>
+							<span class="menu-text">Challenges</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="/activity-feed" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-list-columns-reverse"></i></span>
+							<span class="menu-text">Activity Feed</span>
+						</a>
+					</div>
+<!--
+					<div class="menu-item">
+						<a href="/stats" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-bar-chart"></i></span>
+							<span class="menu-text">Stats</span>
+						</a>
+					</div>
+ -->
+					<div class="menu-item">
+						<a href="/players" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-people"></i></span>
+							<span class="menu-text">Players</span>
+						</a>
+					</div>
+				</div>
+				<!-- END menu -->
+			</div>
+			<!-- END scrollbar -->
+		</div>
+		<!-- END #sidebar -->
+
+		<!-- BEGIN mobile-sidebar-backdrop -->
+		<button class="app-sidebar-mobile-backdrop" data-toggle-target=".app" data-toggle-class="app-sidebar-mobile-toggled"></button>
+		<!-- END mobile-sidebar-backdrop -->
+
+		<!-- BEGIN #content -->
+		<div id="content" class="app-content">
+			<div class="alert alert-warning alert-dismissable fade show p-3">
+				<div>Please note the Scavenger Hunt is now closed!</div>
+			</div>
+
+
+			
+			
+				
+			
+
+			
+
+			
+
+<h1>QR Codes</h1>
+
+<div>
+    <p>Gotta scan 'em all!</p>
+</div>
+
+
+
+
+<div>You can enter Challenge Flags, which look like "<span style="font-family: monospace">bcpt23{some_value_here}</span>", on this page when you are logged in.</div>
+
+<br>
+
+<hr>
+<br>
+
+
+
+
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>1. Golden Ticket (50 points)</h4>
+        <div>
+          
+            Be the lucky finder of a Golden Ticket, or borrow from someone else who was, and scan the QR code on it.
+          
+          
+        </div>
+      </div>
+      <br>
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>2. Assemble a QR Code (40 points)</h4>
+        <div>
+          
+            Work together with 3 other attendees, to piece together the parts in your swag.
+          
+          
+        </div>
+      </div>
+      <br>
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>3. But can you scan this? (40 points)</h4>
+        <div>
+          
+            A popular cyber security YouTuber recently posted about this type of QR code.
+          
+          
+        </div>
+      </div>
+      <br>
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>4. Is that... a QR Code? (40 points)</h4>
+        <div>
+          
+            Who says QR codes have to be plain and boring... Stable Diffusion can do magic!
+          
+          
+        </div>
+      </div>
+      <br>
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>5. Volunteers Help (10 points)</h4>
+        <div>
+          
+            Our Volunteers are happy to help with any questions or problems... and might even have a QR code for you to scan.
+          
+          
+        </div>
+      </div>
+      <br>
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>6. Ready Speaker 1 (10 points)</h4>
+        <div>
+          
+            Where only a Speaker in Track 1 would see it.
+          
+          
+        </div>
+      </div>
+      <br>
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>7. Ready Speaker 2 (10 points)</h4>
+        <div>
+          
+            Where only a Speaker in Track 2 would see it.
+          
+          
+        </div>
+      </div>
+      <br>
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>8. Ready Speaker 3 (10 points)</h4>
+        <div>
+          
+            Where only a Speaker in Track 3 would see it.
+          
+          
+        </div>
+      </div>
+      <br>
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>9. &#34;They&#39;re trashing our rights&#34; (10 points)</h4>
+        <div>
+          
+            &#34;They&#39;re TRASHING our rights, man! They&#39;re TRASHING the flow of data! They&#39;re TRASHING! TRASHING! TRASHING! HACK THE PLANET! HACK THE PLANET!&#34; -- Dade, Hackers
+          
+          
+        </div>
+      </div>
+      <br>
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>10. What&#39;s in the box? (50 points)</h4>
+        <div>
+          
+            Can you pick the locks and find out what&#39;s inside?
+          
+          
+        </div>
+      </div>
+      <br>
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>11. It&#39;s not inside, it&#39;s on top! (20 points)</h4>
+        <div>
+          
+            The vending machine might have a QR code?
+          
+          
+        </div>
+      </div>
+      <br>
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>12. Took over a TV (network?) (20 points)</h4>
+        <div>
+          
+            Did anyone catch that QR code on the TV?
+          
+          
+        </div>
+      </div>
+      <br>
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>13. (0x)Coffee (10 points)</h4>
+        <div>
+          
+            What&#39;s better than a cup of coffee? MOAR COVFEFE!
+          
+          
+        </div>
+      </div>
+      <br>
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>14. Workshop (10 points)</h4>
+        <div>
+          
+            Have you been to the workshop?
+          
+          
+        </div>
+      </div>
+      <br>
+    
+      <div class="alert alert-light" style="background-color: rgb(53, 67, 74, 0.5)">
+        <h4>15. Terrace (10 points)</h4>
+        <div>
+          
+            Have you seen the Two Oceans Aquarium?
+          
+          
+        </div>
+      </div>
+      <br>
+    
+
+
+
+		</div>
+		<!-- END #content -->
+
+		<!-- BEGIN btn-scroll-top -->
+		<a href="#" data-toggle="scroll-to-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+		<!-- END btn-scroll-top -->
+	</div>
+	<!-- END #app -->
+
+	<!-- ================== BEGIN core-js ================== -->
+	<script src="/assets/js/vendor.min.js"></script>
+	<script src="/assets/js/app.min.js"></script>
+	<!-- ================== END core-js ================== -->
+
+	<!-- ================== BEGIN page-js ================== -->
+	<!-- ================== END page-js ================== -->
+</body>
+</html>

@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+	
+	<meta charset="utf-8">
+	<title>Scoreboard - BSides Cape Town</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- ================== BEGIN core-css ================== -->
+	<link href="/assets/css/vendor.min.css" rel="stylesheet">
+	<link href="/assets/css/app.min.css" rel="stylesheet">
+	<!-- ================== END core-css ================== -->
+
+	<!-- ================== BEGIN page-css ================== -->
+	<!-- ================== END page-css ================== -->
+	
+</head>
+<body>
+	<!-- BEGIN #app -->
+	<div id="app" class="app">
+		<!-- BEGIN #header -->
+		<div id="header" class="app-header">
+			<!-- BEGIN desktop-toggler -->
+			<div class="desktop-toggler">
+				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-collapsed" data-dismiss-class="app-sidebar-toggled" data-toggle-target=".app">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+			</div>
+			<!-- BEGIN desktop-toggler -->
+
+			<!-- BEGIN mobile-toggler -->
+			<div class="mobile-toggler">
+				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-mobile-toggled" data-toggle-target=".app">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+			</div>
+			<!-- END mobile-toggler -->
+
+			<!-- BEGIN brand -->
+			<div class="brand">
+				<a href="" class="brand-logo">
+					<span class="brand-text">BSides 2023 Scavenger Hunt</span>
+				</a>
+			</div>
+			<!-- END brand -->
+
+			<!-- BEGIN menu -->
+			<div class="menu">
+				<!-- <div class="menu-item dropdown dropdown-mobile-full">
+					<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
+						<div class="menu-icon"><i class="bi bi-bell nav-icon"></i></div>
+						<div class="menu-badge bg-theme"></div>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end mt-1 w-300px fs-11px pt-1">
+						<h6 class="dropdown-header fs-10px mb-1">NOTIFICATIONS</h6>
+						<div class="dropdown-divider mt-1"></div>
+						<a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
+							<div class="fs-20px w-20px">
+								<i class="bi bi-person-circle text-theme"></i>
+							</div>
+							<div class="flex-1 flex-wrap ps-3">
+								<div class="mb-1 text-white">YOU HAVE TAKEN THE LEAD!</div>
+								<div class="small">JUST NOW</div>
+							</div>
+							<div class="ps-2 fs-16px">
+								<i class="bi bi-chevron-right"></i>
+							</div>
+						</a>
+						<a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
+							<div class="fs-20px w-20px">
+								<i class="bi bi-grid text-theme"></i>
+							</div>
+							<div class="flex-1 flex-wrap ps-3">
+								<div class="mb-1 text-white">NEW CHALLENGE UNLOCKED</div>
+								<div class="small">2 MINUTES AGO</div>
+							</div>
+							<div class="ps-2 fs-16px">
+								<i class="bi bi-chevron-right"></i>
+							</div>
+						</a>
+						<hr class="bg-white-transparent-5 mb-0 mt-2">
+						<div class="py-10px mb-n2 text-center">
+							<a href="#" class="text-decoration-none fw-bold">SEE ALL</a>
+						</div>
+					</div>
+				</div> -->
+				<div class="menu-item dropdown dropdown-mobile-full">
+					<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
+						<div class="menu-text d-sm-block d-none">LOGIN&nbsp;&nbsp;</div>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end me-lg-3 fs-11px mt-1">
+						<a class="dropdown-item d-flex align-items-center" href="/login-discord">WITH DISCORD <i class="fab fa-lg fa-fw me-2 fa-discord ms-auto text-theme fs-16px my-n1"></i></a>
+						<a class="dropdown-item d-flex align-items-center" href="/login-email">WITH EMAIL <i class="fas fa-lg fa-fw me-2 fa-envelope ms-auto text-theme fs-16px my-n1"></i></a>
+					</div>
+
+					</div>
+			</div>
+			<!-- END menu -->
+
+			<!-- BEGIN menu-search -->
+			<form class="menu-search" method="POST" name="header_search_form">
+				<div class="menu-search-container">
+					<div class="menu-search-icon"><i class="bi bi-search"></i></div>
+					<div class="menu-search-input">
+						<input type="text" class="form-control form-control-lg" placeholder="Search menu...">
+					</div>
+					<div class="menu-search-icon">
+						<a href="#" data-toggle-class="app-header-menu-search-toggled" data-toggle-target=".app"><i class="bi bi-x-lg"></i></a>
+					</div>
+				</div>
+			</form>
+			<!-- END menu-search -->
+		</div>
+		<!-- END #header -->
+
+		<!-- BEGIN #sidebar -->
+		<div id="sidebar" class="app-sidebar">
+			<!-- BEGIN scrollbar -->
+			<div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+				<!-- BEGIN menu -->
+				<div class="menu">
+					<div class="menu-header">Navigation</div>
+					<div class="menu-item">
+						<a href="/" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-house"></i></span>
+							<span class="menu-text">Home</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="/login-discord" class="menu-link">
+							<span class="menu-icon"><i class="fab fa fa-discord"></i></span>
+							<span class="menu-text">Login with Discord</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="/login-email" class="menu-link">
+							<span class="menu-icon"><i class="fa fa-envelope"></i></span>
+							<span class="menu-text">Login with Email</span>
+						</a>
+					</div>
+					
+
+					<div class="menu-item">
+						<a href="/scoreboards" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-trophy"></i></span>
+							<span class="menu-text">Scoreboard</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="/challenges" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-ticket-perforated"></i></span>
+							<span class="menu-text">Challenges</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="/activity-feed" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-list-columns-reverse"></i></span>
+							<span class="menu-text">Activity Feed</span>
+						</a>
+					</div>
+<!--
+					<div class="menu-item">
+						<a href="/stats" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-bar-chart"></i></span>
+							<span class="menu-text">Stats</span>
+						</a>
+					</div>
+ -->
+					<div class="menu-item">
+						<a href="/players" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-people"></i></span>
+							<span class="menu-text">Players</span>
+						</a>
+					</div>
+				</div>
+				<!-- END menu -->
+			</div>
+			<!-- END scrollbar -->
+		</div>
+		<!-- END #sidebar -->
+
+		<!-- BEGIN mobile-sidebar-backdrop -->
+		<button class="app-sidebar-mobile-backdrop" data-toggle-target=".app" data-toggle-class="app-sidebar-mobile-toggled"></button>
+		<!-- END mobile-sidebar-backdrop -->
+
+		<!-- BEGIN #content -->
+		<div id="content" class="app-content">
+			<div class="alert alert-warning alert-dismissable fade show p-3">
+				<div>Please note the Scavenger Hunt is now closed!</div>
+			</div>
+
+
+			
+			
+				
+			
+
+			
+
+			
+
+<div class="card mb-3">
+  <div class="card-header fw-bold small d-flex">
+    <span class="flex-grow-1"><h1>Highest Scores</h1></span>
+    <a href="#" data-toggle="card-expand" class="text-white text-opacity-50 text-decoration-none"><i class="fa fa-fw fa-expand"></i> EXPAND</a>
+  </div>
+  <div class="card-body" style="overflow: hidden !important">
+    <table class="table table-hover">
+      <thead class="table-light">
+        <tr>
+          <th scope="col">#</th>
+          <th></th>
+          <th scope="col">Player</th>
+          <th scope="col" style="text-align: right">Points Scored</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr onClick="window.location='/profiles/170'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>1</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>SynStalker</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>920</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/153'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>2</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Wrathza</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>800</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/161'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>3</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/901049918825840670/51ed27193e40798349e0e9e0fd30729f.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Blessing🖥</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>720</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/119'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>4</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Rafique Railoun</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>680</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/165'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>5</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/285713543242973187/116e4971dd5fbdd5672b6349e4cb6c8f.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Robert</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>580</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/182'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>6</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/1140527095118827530/4aabb6af355b82c3e21ece5ffe7d0486.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Nankie🐾</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>540</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/120'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>7</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/694596364474253382/8a70bb96890f3f9e2bde7fbe45a3d840.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>rowAnomaly</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>540</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/123'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>8</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Tiaan</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>480</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/107'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>9</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/398403224891031552/48af88bf8939712d0c346d90c1e8dacf.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Fundermonkey</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>390</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/126'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>10</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Deez</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>380</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/69'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>11</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/207034014895177728/e79ed76905dae6313d9dcf211ec7dbce.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>LexiOfBorg</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>350</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/156'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>12</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/441294890874175498/338908f593482e3f4ad7796d5eaf440e.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>SHAINE</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>330</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/176'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>13</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Alphonso</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>310</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/117'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>14</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>leon808</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>300</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/157'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>15</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Ashley</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>290</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/75'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>16</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/651341671329693709/69ada6c44f54529d2452014032ae8c85.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Glasscold</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>290</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/191'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>17</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/798622514984910848/65f68e9bc094d519be282efb9947d72c.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Viperidae</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>280</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/108'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>18</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/274818457932136448/73f293d82b2273c6760e92fdfa37c6ae.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>SkippyPeanut</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>270</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/139'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>19</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Hapunkey</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>260</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/181'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>20</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Citybicycle</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>250</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/150'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>21</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Cornelis </h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>210</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/124'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>22</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/365954202247364611/6137a6b7e9d28038d74a6fe35ad34c2e.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Aztech1069</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>210</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/224'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>23</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Pi</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>190</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/125'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>24</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Trojan</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>190</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/141'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>25</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>NotJP</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>180</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/129'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>26</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Autobot</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>180</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/118'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>27</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>BlackSheep</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>170</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/189'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>28</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Maverick</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>160</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/105'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>29</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Q @ Cyberlinx Security</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>160</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/205'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>30</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/733969579000201306/2a52f8639a4a8db7361d48041a822ae0.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>ElectricMeatball</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>150</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/178'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>31</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Crabnuts</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>150</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/175'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>32</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Hlali</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>150</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/169'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>33</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>J3</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>150</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/163'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>34</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/345555207838760960/a551bf1b3957f63b7e885991bb3533c7.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>jfunction</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>140</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/196'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>35</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Chrismalaine</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>120</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/193'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>36</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Shacaleigh</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>120</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/174'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>37</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Pho3nix</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>120</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/138'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>38</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Anon1</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>120</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/135'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>39</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Gerhard</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>120</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/106'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>40</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>HandsomeJack</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>120</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/81'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>41</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>atrooper.</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>120</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/209'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>42</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/241347303607238656/f350d6c735b93fb9d936a022e1db2f26.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Cupcake</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>110</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/142'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>43</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Daniel P</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>100</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/155'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>44</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Melody</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>90</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/159'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>45</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>TheChalkController</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>80</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/194'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>46</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/463098658242428938/fc3554ec56205dca50130d8ad6c45e2a.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>JiyaadExe</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>60</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/188'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>47</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/762337730533261312/b270f87134f4f1374bac971f76cf3bdb.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Ori-oreo</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>60</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/168'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>48</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Christian </h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>60</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/144'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>49</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>ReaperCrew</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>60</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/143'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>50</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Litchi</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>50</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/115'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>51</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/558292982109962255/59dc14964f815e37a502c1a075c0e3eb.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>tag_souhail</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>50</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/101'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>52</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>am03bam4n</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>40</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/128'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>53</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>nadedjk</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>30</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/186'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>54</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>EastAfricanTechGuy</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>20</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/166'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>55</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/415244874246389761/a6d4a6b227fff648e0746856fc147934.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>BigDataDave</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>20</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/140'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>56</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Nowyousimi</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>20</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/187'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>57</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Letho</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>10</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/183'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>58</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/454922808728748042/a_e0d3e70ea6a294c9e115d39abe88d17c.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Sloth</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>10</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/179'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>59</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/696771122271617085/6900f15074478af39092372b831aaf4a.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>EdgeRunner</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>10</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/173'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>60</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Evern Julius</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>10</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/162'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>61</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/224424057561546753/f9c6617c2362441c8719a37abb7019ca.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>upstairsdave</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>10</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/151'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>62</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/976503215443042384/fe11083bcc677c9396b3bddbb5b45a31.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>CodeHunter</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>10</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/136'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>63</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/288624950951149568/a4def07bbf65499c17e7bd30153eb7d9.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Noice</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>10</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/180'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>64</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Kingbravo</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/19'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>65</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/612565321269641216/961cbef34a7584c01b4d2583da751cbd.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>cuchulainZA</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/17'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>66</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/298223141941936139/46ebc99f41b307cc93ac663c64579af0.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>apexxor</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/229'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>67</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/590298488747851804/72092cd62eaa04c02415e049ea3efb53.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>sp3kt0r</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/222'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>68</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/914335897661607936/84a062f71bf7560e11c9871cb5200e4f.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>tag</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/217'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>69</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Anonymous#217</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/212'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>70</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Anonymous#212</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/204'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>71</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Anonymous#204</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/198'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>72</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Kiara</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/185'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>73</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Anonymous#185</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/177'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>74</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>nimar</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/172'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>75</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Vanilson</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/167'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>76</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Car</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/158'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>77</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Dustydoolittle</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/152'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>78</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>chef291277</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/149'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>79</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>H</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/148'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>80</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Anonymous#148</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/147'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>81</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Anonymous#147</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/145'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>82</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Anonymous#145</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/137'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>83</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Zeecleaner</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/134'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>84</h4>
+          </th>
+          <td>
+            <img src="https://cdn.discordapp.com/avatars/918747798164344852/8c6b837f9ea52834046850482d1d7846.png" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>8BitAcorn</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/133'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>85</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Anonymous#133</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/131'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>86</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Hugo Agenbag</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/122'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>87</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>CodeHunter</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/114'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>88</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Anonymous#114</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/112'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>89</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Anonymous#112</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+        <tr onClick="window.location='/profiles/89'">
+          <th scope="row" style="vertical-align: middle">
+            <h4>90</h4>
+          </th>
+          <td>
+            <img src="/assets/img/logo.jpg" style="height: 64px; max-width: 64px; max-height: 64px; border-radius: 30px;" class="menu-text d-sm-block d-none" />
+          </td>
+          <td style="vertical-align: middle">
+            <h4>Anonymous#89</h4>
+          </td>
+          <td style="vertical-align: middle; text-align: right">
+            <h4>0</h4>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+  <div class="card-arrow">
+    <div class="card-arrow-top-left"></div>
+    <div class="card-arrow-top-right"></div>
+    <div class="card-arrow-bottom-left"></div>
+    <div class="card-arrow-bottom-right"></div>
+  </div>
+</div>
+
+<!--
+<br /><br /><br /><br /><br /><br />
+
+<div class="card mb-3">
+  <div class="card-header fw-bold small d-flex">
+    <span class="flex-grow-1"><h1>Most Challenges Solved</h1></span>
+    <a href="#" data-toggle="card-expand" class="text-white text-opacity-50 text-decoration-none"><i class="fa fa-fw fa-expand"></i> EXPAND</a>
+  </div>
+  <div class="card-body" style="overflow: hidden !important">
+    <table class="table table-hover">
+      <thead class="table-light">
+        <tr>
+          <th scope="col">#</th>
+          <th></th>
+          <th scope="col">Player</th>
+          <th scope="col" style="text-align: right">Challenges Solved</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" style="vertical-align: middle"><h3>1</h3></th>
+          <td><img src="https://cdn.discordapp.com/avatars/482318642315264011/428467a066fe35d9ecba76bf9de0f192.png" style="height: 64px; max-width: 100%; max-height: 100%; border-radius: 30px;" /></td>
+          <td style="vertical-align: middle"><h3>AngusRedBlue</td>
+          <td style="vertical-align: middle; text-align: right"><h3>30</h3></td>
+        </tr>
+        <tr>
+          <th scope="row" style="vertical-align: middle"><h3>2</h3></th>
+          <td><img src="https://pbs.twimg.com/profile_images/67190796/me_400x400.jpg" style="height: 64px; max-width: 100%; max-height: 100%; border-radius: 30px;" /></td>
+          <td style="vertical-align: middle"><h3>Dale Nunns</h3></td>
+          <td style="vertical-align: middle; text-align: right"><h3>20</h3></td>
+        </tr>
+        <tr>
+          <th scope="row" style="vertical-align: middle"><h3>3</h3></th>
+          <td><img src="https://cdn.discordapp.com/avatars/480405321366634522/90795204e3fdf6efef29146c456ad9af.webp?size=60" style="height: 64px; max-width: 100%; max-height: 100%; border-radius: 30px;" /></td>
+          <td style="vertical-align: middle"><h3>singe</h3></td>
+          <td style="vertical-align: middle; text-align: right"><h3>10</h3></td>
+        </tr>
+        <tr>
+          <th scope="row" style="vertical-align: middle"><h3>4</h3></th>
+          <td><img src="https://cdn.discordapp.com/avatars/371028610712338433/260ee96d225319bebe09b377f1db3077.png" style="height: 64px; max-width: 100%; max-height: 100%; border-radius: 30px;" /></td>
+          <td style="vertical-align: middle"><h3>Hypn</h3></td>
+          <td style="vertical-align: middle; text-align: right"><h3>6</h3></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card-arrow">
+    <div class="card-arrow-top-left"></div>
+    <div class="card-arrow-top-right"></div>
+    <div class="card-arrow-bottom-left"></div>
+    <div class="card-arrow-bottom-right"></div>
+  </div>
+</div>
+-->
+
+<script>
+  if (window.location.href.includes('fullscreen=1')) {
+    var cardElement = document.getElementsByClassName("card")[0];
+    if (cardElement) {
+      cardElement.classList.add("card-expand");
+    }
+  }
+</script>
+
+		</div>
+		<!-- END #content -->
+
+		<!-- BEGIN btn-scroll-top -->
+		<a href="#" data-toggle="scroll-to-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+		<!-- END btn-scroll-top -->
+	</div>
+	<!-- END #app -->
+
+	<!-- ================== BEGIN core-js ================== -->
+	<script src="/assets/js/vendor.min.js"></script>
+	<script src="/assets/js/app.min.js"></script>
+	<!-- ================== END core-js ================== -->
+
+	<!-- ================== BEGIN page-js ================== -->
+	<!-- ================== END page-js ================== -->
+</body>
+</html>

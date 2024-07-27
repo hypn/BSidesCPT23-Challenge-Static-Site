@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+	
+	<meta charset="utf-8">
+	<title>Activity Feed - BSides Cape Town</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- ================== BEGIN core-css ================== -->
+	<link href="/assets/css/vendor.min.css" rel="stylesheet">
+	<link href="/assets/css/app.min.css" rel="stylesheet">
+	<!-- ================== END core-css ================== -->
+
+	<!-- ================== BEGIN page-css ================== -->
+	<!-- ================== END page-css ================== -->
+	
+</head>
+<body>
+	<!-- BEGIN #app -->
+	<div id="app" class="app">
+		<!-- BEGIN #header -->
+		<div id="header" class="app-header">
+			<!-- BEGIN desktop-toggler -->
+			<div class="desktop-toggler">
+				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-collapsed" data-dismiss-class="app-sidebar-toggled" data-toggle-target=".app">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+			</div>
+			<!-- BEGIN desktop-toggler -->
+
+			<!-- BEGIN mobile-toggler -->
+			<div class="mobile-toggler">
+				<button type="button" class="menu-toggler" data-toggle-class="app-sidebar-mobile-toggled" data-toggle-target=".app">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
+			</div>
+			<!-- END mobile-toggler -->
+
+			<!-- BEGIN brand -->
+			<div class="brand">
+				<a href="" class="brand-logo">
+					<span class="brand-text">BSides 2023 Scavenger Hunt</span>
+				</a>
+			</div>
+			<!-- END brand -->
+
+			<!-- BEGIN menu -->
+			<div class="menu">
+				<!-- <div class="menu-item dropdown dropdown-mobile-full">
+					<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
+						<div class="menu-icon"><i class="bi bi-bell nav-icon"></i></div>
+						<div class="menu-badge bg-theme"></div>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end mt-1 w-300px fs-11px pt-1">
+						<h6 class="dropdown-header fs-10px mb-1">NOTIFICATIONS</h6>
+						<div class="dropdown-divider mt-1"></div>
+						<a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
+							<div class="fs-20px w-20px">
+								<i class="bi bi-person-circle text-theme"></i>
+							</div>
+							<div class="flex-1 flex-wrap ps-3">
+								<div class="mb-1 text-white">YOU HAVE TAKEN THE LEAD!</div>
+								<div class="small">JUST NOW</div>
+							</div>
+							<div class="ps-2 fs-16px">
+								<i class="bi bi-chevron-right"></i>
+							</div>
+						</a>
+						<a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
+							<div class="fs-20px w-20px">
+								<i class="bi bi-grid text-theme"></i>
+							</div>
+							<div class="flex-1 flex-wrap ps-3">
+								<div class="mb-1 text-white">NEW CHALLENGE UNLOCKED</div>
+								<div class="small">2 MINUTES AGO</div>
+							</div>
+							<div class="ps-2 fs-16px">
+								<i class="bi bi-chevron-right"></i>
+							</div>
+						</a>
+						<hr class="bg-white-transparent-5 mb-0 mt-2">
+						<div class="py-10px mb-n2 text-center">
+							<a href="#" class="text-decoration-none fw-bold">SEE ALL</a>
+						</div>
+					</div>
+				</div> -->
+				<div class="menu-item dropdown dropdown-mobile-full">
+					<a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
+						<div class="menu-text d-sm-block d-none">LOGIN&nbsp;&nbsp;</div>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end me-lg-3 fs-11px mt-1">
+						<a class="dropdown-item d-flex align-items-center" href="/login-discord">WITH DISCORD <i class="fab fa-lg fa-fw me-2 fa-discord ms-auto text-theme fs-16px my-n1"></i></a>
+						<a class="dropdown-item d-flex align-items-center" href="/login-email">WITH EMAIL <i class="fas fa-lg fa-fw me-2 fa-envelope ms-auto text-theme fs-16px my-n1"></i></a>
+					</div>
+
+					</div>
+			</div>
+			<!-- END menu -->
+
+			<!-- BEGIN menu-search -->
+			<form class="menu-search" method="POST" name="header_search_form">
+				<div class="menu-search-container">
+					<div class="menu-search-icon"><i class="bi bi-search"></i></div>
+					<div class="menu-search-input">
+						<input type="text" class="form-control form-control-lg" placeholder="Search menu...">
+					</div>
+					<div class="menu-search-icon">
+						<a href="#" data-toggle-class="app-header-menu-search-toggled" data-toggle-target=".app"><i class="bi bi-x-lg"></i></a>
+					</div>
+				</div>
+			</form>
+			<!-- END menu-search -->
+		</div>
+		<!-- END #header -->
+
+		<!-- BEGIN #sidebar -->
+		<div id="sidebar" class="app-sidebar">
+			<!-- BEGIN scrollbar -->
+			<div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+				<!-- BEGIN menu -->
+				<div class="menu">
+					<div class="menu-header">Navigation</div>
+					<div class="menu-item">
+						<a href="/" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-house"></i></span>
+							<span class="menu-text">Home</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="/login-discord" class="menu-link">
+							<span class="menu-icon"><i class="fab fa fa-discord"></i></span>
+							<span class="menu-text">Login with Discord</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="/login-email" class="menu-link">
+							<span class="menu-icon"><i class="fa fa-envelope"></i></span>
+							<span class="menu-text">Login with Email</span>
+						</a>
+					</div>
+					
+
+					<div class="menu-item">
+						<a href="/scoreboards" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-trophy"></i></span>
+							<span class="menu-text">Scoreboard</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="/challenges" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-ticket-perforated"></i></span>
+							<span class="menu-text">Challenges</span>
+						</a>
+					</div>
+					<div class="menu-item">
+						<a href="/activity-feed" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-list-columns-reverse"></i></span>
+							<span class="menu-text">Activity Feed</span>
+						</a>
+					</div>
+<!--
+					<div class="menu-item">
+						<a href="/stats" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-bar-chart"></i></span>
+							<span class="menu-text">Stats</span>
+						</a>
+					</div>
+ -->
+					<div class="menu-item">
+						<a href="/players" class="menu-link">
+							<span class="menu-icon"><i class="bi bi-people"></i></span>
+							<span class="menu-text">Players</span>
+						</a>
+					</div>
+				</div>
+				<!-- END menu -->
+			</div>
+			<!-- END scrollbar -->
+		</div>
+		<!-- END #sidebar -->
+
+		<!-- BEGIN mobile-sidebar-backdrop -->
+		<button class="app-sidebar-mobile-backdrop" data-toggle-target=".app" data-toggle-class="app-sidebar-mobile-toggled"></button>
+		<!-- END mobile-sidebar-backdrop -->
+
+		<!-- BEGIN #content -->
+		<div id="content" class="app-content">
+			<div class="alert alert-warning alert-dismissable fade show p-3">
+				<div>Please note the Scavenger Hunt is now closed!</div>
+			</div>
+
+
+			
+			
+				
+			
+
+			
+
+			
+<h1>Activity Feed</h1>
+
+<br>
+
+<div class="card">
+  <div class="card-header fw-bold small">ACTIVITIY FEED:</div>
+  <div class="card-header bg-none p-0">
+    <ul class="list-group list-group-flush">
+      
+        <li class="list-group-item">[2023-12-02 20:49] <strong><a href="/profiles/229">sp3kt0r</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 17:51] <strong><a href="/profiles/224">Pi</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 17:18] <strong><a href="/profiles/15">PawnStar</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 16:21] <strong><a href="/profiles/176">Alphonso</a></strong> solved "<em>Golden Ticket</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 16:09] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Take a selfie with a representative or booth of the Platinum Sponsor</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 16:04] <strong><a href="/profiles/169">J3</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 16:04] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 16:04] <strong><a href="/profiles/124">Aztech1069</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:58] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Take a selfie with a representative of one of the Silver Sponsors.</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:55] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Retro BSides Sticker</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:54] <strong><a href="/profiles/174">Pho3nix</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:54] <strong><a href="/profiles/224">Pi</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:52] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Post a picture of your favourite sticker, if you can, tag where you got it.</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:48] <strong><a href="/profiles/174">Pho3nix</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:48] <strong><a href="/profiles/224">Pi</a></strong> solved "<em>Workshop</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:45] <strong><a href="/profiles/224">Pi</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:45] <strong><a href="/profiles/224">Pi</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:45] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:45] <strong><a href="/profiles/224">Pi</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:44] <strong><a href="/profiles/224">Pi</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:43] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:43] <strong><a href="/profiles/224">Pi</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:43] <strong><a href="/profiles/224">Pi</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:42] <strong><a href="/profiles/15">PawnStar</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:42] <strong><a href="/profiles/15">PawnStar</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:41] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:41] <strong><a href="/profiles/69">LexiOfBorg</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 15:41] <strong><a href="/profiles/15">PawnStar</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:41] <strong><a href="/profiles/224">Pi</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:41] <strong><a href="/profiles/224">Pi</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:41] <strong><a href="/profiles/224">Pi</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:40] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:40] <strong><a href="/profiles/224">Pi</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 15:40] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>81 Days is plenty time, right?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:38] <strong><a href="/profiles/222">tag</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 15:35] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:35] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:33] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Ready Speaker 3</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:29] <strong><a href="/profiles/209">Cupcake</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:28] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Golden Ticket</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:26] <strong><a href="/profiles/139">Hapunkey</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:23] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Find the BSides Cape Town sign or banner, take a selfie with it.</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:23] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Vending Machine Love</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:19] <strong><a href="/profiles/188">Ori-oreo</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:19] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Five BSides Shirts</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:19] <strong><a href="/profiles/139">Hapunkey</a></strong> solved "<em>Ready Speaker 1</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:18] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Get a funny photo where you high five a member of OfferZen</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:18] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:18] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Get a funny photo where you high five a member of OfferZen</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:17] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:17] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Find the BSides Cape Town sign or banner, take a selfie with it.</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:16] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:16] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Take a selfie with your favourite speaker of the day</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:14] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>CTF Scoreboard</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:14] <strong><a href="/profiles/188">Ori-oreo</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:13] <strong><a href="/profiles/163">jfunction</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:11] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:11] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Vending Machine Love</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:10] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:10] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Five BSides Shirts</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:10] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:10] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:10] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Take a selfie with a representative or booth of one of the Gold Sponsors.</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:09] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Limited Edition Hoodie</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:08] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Five BSides Shirts</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:07] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Take a selfie with a representative or booth of one of the Gold Sponsors.</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:07] <strong><a href="/profiles/142">Daniel P</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:06] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>A tree of links!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:04] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>CTF Scoreboard</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:04] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>I was a foodie influencer</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:04] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>Limited Edition Hoodie</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:04] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Retro BSides Sticker</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:03] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Limited Edition Hoodie</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:03] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Vending Machine Love</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:03] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>A tree of links!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:03] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Chilled Out</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:02] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>A tree of links!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:01] <strong><a href="/profiles/176">Alphonso</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 15:01] <strong><a href="/profiles/176">Alphonso</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 15:00] <strong><a href="/profiles/176">Alphonso</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:59] <strong><a href="/profiles/189">Maverick</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:58] <strong><a href="/profiles/139">Hapunkey</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:58] <strong><a href="/profiles/169">J3</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:58] <strong><a href="/profiles/168">Christian </a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:56] <strong><a href="/profiles/176">Alphonso</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:56] <strong><a href="/profiles/176">Alphonso</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:50] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>I was a foodie influencer</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:48] <strong><a href="/profiles/209">Cupcake</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:48] <strong><a href="/profiles/209">Cupcake</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:48] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Golden Ticket</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:47] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Sponsors!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:47] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:47] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:46] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:46] <strong><a href="/profiles/15">PawnStar</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:43] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:43] <strong><a href="/profiles/120">rowAnomaly</a></strong> completed the "<a href="/challenges/1">QR Codes</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 14:43] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Took over a TV (network?)</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:42] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Workshop</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:40] <strong><a href="/profiles/188">Ori-oreo</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:40] <strong><a href="/profiles/191">Viperidae</a></strong> solved "<em>Golden Ticket</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:40] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:40] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:40] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:39] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:39] <strong><a href="/profiles/15">PawnStar</a></strong> solved "<em>Golden Ticket</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:38] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>Workshop</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:38] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:38] <strong><a href="/profiles/209">Cupcake</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:38] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:37] <strong><a href="/profiles/209">Cupcake</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:37] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:37] <strong><a href="/profiles/209">Cupcake</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:36] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:33] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:31] <strong><a href="/profiles/217">Anonymous#217</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 14:29] <strong><a href="/profiles/124">Aztech1069</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:26] <strong><a href="/profiles/163">jfunction</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:26] <strong><a href="/profiles/186">EastAfricanTechGuy</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:26] <strong><a href="/profiles/176">Alphonso</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:26] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:22] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Tickets on sale!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:21] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>A tree of links!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:19] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>81 Days is plenty time, right?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:19] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:18] <strong><a href="/profiles/183">Sloth</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:18] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:18] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:18] <strong><a href="/profiles/139">Hapunkey</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:18] <strong><a href="/profiles/142">Daniel P</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:18] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:18] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:18] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:17] <strong><a href="/profiles/169">J3</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:13] <strong><a href="/profiles/191">Viperidae</a></strong> solved "<em>What's in the box?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:11] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>A call for papers</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:11] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>Workshop</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 14:10] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Quicket Ticket</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:57] <strong><a href="/profiles/182">Nankie🐾</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 13:57] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:57] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:55] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:53] <strong><a href="/profiles/169">J3</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:53] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:51] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:51] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:50] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>Take me to your leader</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:50] <strong><a href="/profiles/188">Ori-oreo</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:50] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>By Your Powers Combined</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:49] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>Take a selfie with a representative or booth of one of the Gold Sponsors.</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:49] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>Take a selfie with a representative or booth of the Platinum Sponsor</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:49] <strong><a href="/profiles/169">J3</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:46] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>By Your Powers Combined</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:45] <strong><a href="/profiles/139">Hapunkey</a></strong> solved "<em>What's in the box?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:44] <strong><a href="/profiles/205">ElectricMeatball</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:44] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>I was a foodie influencer</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:44] <strong><a href="/profiles/212">Anonymous#212</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 13:42] <strong><a href="/profiles/157">Ashley</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:42] <strong><a href="/profiles/157">Ashley</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:39] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:39] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:36] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:36] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:36] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:36] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:36] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Ready Speaker 1</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:36] <strong><a href="/profiles/15">PawnStar</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:32] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:31] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:30] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:29] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Body Hex</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:29] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Ready Speaker 1</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:25] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>RIP Strauss :(</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:24] <strong><a href="/profiles/106">HandsomeJack</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:23] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Ready Speaker 1</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:20] <strong><a href="/profiles/209">Cupcake</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 13:16] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:15] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:14] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:14] <strong><a href="/profiles/106">HandsomeJack</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:09] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>What's in the box?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:08] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:07] <strong><a href="/profiles/124">Aztech1069</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:06] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:03] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>What's in the box?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:01] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>RIP Strauss :(</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:01] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Workshop</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:01] <strong><a href="/profiles/176">Alphonso</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 13:00] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>RIP Strauss :(</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:59] <strong><a href="/profiles/168">Christian </a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:59] <strong><a href="/profiles/168">Christian </a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:58] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:56] <strong><a href="/profiles/163">jfunction</a></strong> solved "<em>Golden Ticket</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:56] <strong><a href="/profiles/205">ElectricMeatball</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:56] <strong><a href="/profiles/205">ElectricMeatball</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:55] <strong><a href="/profiles/205">ElectricMeatball</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:55] <strong><a href="/profiles/142">Daniel P</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:55] <strong><a href="/profiles/176">Alphonso</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:55] <strong><a href="/profiles/176">Alphonso</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:55] <strong><a href="/profiles/188">Ori-oreo</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:54] <strong><a href="/profiles/142">Daniel P</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:54] <strong><a href="/profiles/142">Daniel P</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:53] <strong><a href="/profiles/205">ElectricMeatball</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:53] <strong><a href="/profiles/205">ElectricMeatball</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:52] <strong><a href="/profiles/205">ElectricMeatball</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:52] <strong><a href="/profiles/163">jfunction</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:52] <strong><a href="/profiles/205">ElectricMeatball</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:48] <strong><a href="/profiles/176">Alphonso</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:47] <strong><a href="/profiles/176">Alphonso</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:42] <strong><a href="/profiles/205">ElectricMeatball</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 12:38] <strong><a href="/profiles/159">TheChalkController</a></strong> solved "<em>What's in the box?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:35] <strong><a href="/profiles/187">Letho</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:35] <strong><a href="/profiles/153">Wrathza</a></strong> completed the "<a href="/challenges/2">Social Media Flags</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 12:35] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Tickets on sale!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:32] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:32] <strong><a href="/profiles/117">leon808</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 12:32] <strong><a href="/profiles/124">Aztech1069</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:32] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>Workshop</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:31] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>What's in the box?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:30] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:30] <strong><a href="/profiles/124">Aztech1069</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:29] <strong><a href="/profiles/204">Anonymous#204</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 12:29] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:25] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:25] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>Chilled Out</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:25] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>Get a funny photo where you high five a member of OfferZen</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:25] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>What's in the box?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:25] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>CTF Scoreboard</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:24] <strong><a href="/profiles/191">Viperidae</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:23] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:22] <strong><a href="/profiles/189">Maverick</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:22] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:21] <strong><a href="/profiles/115">tag_souhail</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:19] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:19] <strong><a href="/profiles/189">Maverick</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:19] <strong><a href="/profiles/194">JiyaadExe</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:18] <strong><a href="/profiles/157">Ashley</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:18] <strong><a href="/profiles/178">Crabnuts</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:18] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:18] <strong><a href="/profiles/194">JiyaadExe</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:17] <strong><a href="/profiles/124">Aztech1069</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:17] <strong><a href="/profiles/178">Crabnuts</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:17] <strong><a href="/profiles/178">Crabnuts</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:16] <strong><a href="/profiles/194">JiyaadExe</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:16] <strong><a href="/profiles/189">Maverick</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:15] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:13] <strong><a href="/profiles/182">Nankie🐾</a></strong> solved "<em>Vending Machine Love</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:13] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:11] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:10] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:09] <strong><a href="/profiles/107">Fundermonkey</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 12:09] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:08] <strong><a href="/profiles/178">Crabnuts</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:07] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:06] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Body Hex</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:06] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>What's in the box?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:06] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Retro BSides Sticker</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:04] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:02] <strong><a href="/profiles/196">Chrismalaine</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:02] <strong><a href="/profiles/196">Chrismalaine</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 12:00] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>What's in the box?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:59] <strong><a href="/profiles/196">Chrismalaine</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:59] <strong><a href="/profiles/175">Hlali</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:59] <strong><a href="/profiles/175">Hlali</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 11:59] <strong><a href="/profiles/175">Hlali</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:58] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:58] <strong><a href="/profiles/175">Hlali</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:58] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:58] <strong><a href="/profiles/175">Hlali</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:58] <strong><a href="/profiles/193">Shacaleigh</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:57] <strong><a href="/profiles/193">Shacaleigh</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:57] <strong><a href="/profiles/196">Chrismalaine</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:57] <strong><a href="/profiles/193">Shacaleigh</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:57] <strong><a href="/profiles/157">Ashley</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:57] <strong><a href="/profiles/193">Shacaleigh</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:57] <strong><a href="/profiles/196">Chrismalaine</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:55] <strong><a href="/profiles/157">Ashley</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 11:55] <strong><a href="/profiles/157">Ashley</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:55] <strong><a href="/profiles/157">Ashley</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:52] <strong><a href="/profiles/115">tag_souhail</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:52] <strong><a href="/profiles/115">tag_souhail</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:51] <strong><a href="/profiles/191">Viperidae</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:51] <strong><a href="/profiles/196">Chrismalaine</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:51] <strong><a href="/profiles/198">Kiara</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:50] <strong><a href="/profiles/189">Maverick</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:50] <strong><a href="/profiles/191">Viperidae</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:50] <strong><a href="/profiles/196">Chrismalaine</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:49] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Took over a TV (network?)</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:49] <strong><a href="/profiles/193">Shacaleigh</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:49] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Took over a TV (network?)</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:48] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:47] <strong><a href="/profiles/191">Viperidae</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:47] <strong><a href="/profiles/193">Shacaleigh</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:47] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:46] <strong><a href="/profiles/191">Viperidae</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:46] <strong><a href="/profiles/191">Viperidae</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:46] <strong><a href="/profiles/194">JiyaadExe</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:45] <strong><a href="/profiles/193">Shacaleigh</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:45] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:45] <strong><a href="/profiles/129">Autobot</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:45] <strong><a href="/profiles/141">NotJP</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:45] <strong><a href="/profiles/178">Crabnuts</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:44] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Body Hex</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:43] <strong><a href="/profiles/175">Hlali</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:43] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:42] <strong><a href="/profiles/176">Alphonso</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:41] <strong><a href="/profiles/191">Viperidae</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:41] <strong><a href="/profiles/191">Viperidae</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:41] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:41] <strong><a href="/profiles/161">Blessing🖥</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 11:41] <strong><a href="/profiles/157">Ashley</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:41] <strong><a href="/profiles/191">Viperidae</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:40] <strong><a href="/profiles/191">Viperidae</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:40] <strong><a href="/profiles/191">Viperidae</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:40] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:40] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:40] <strong><a href="/profiles/7">mooncake</a></strong> completed the "<a href="/challenges/1">QR Codes</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 11:39] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:39] <strong><a href="/profiles/163">jfunction</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:39] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:39] <strong><a href="/profiles/189">Maverick</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:39] <strong><a href="/profiles/189">Maverick</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 11:39] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:39] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:39] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:39] <strong><a href="/profiles/189">Maverick</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:39] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:38] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:38] <strong><a href="/profiles/175">Hlali</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:37] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:37] <strong><a href="/profiles/189">Maverick</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:37] <strong><a href="/profiles/15">PawnStar</a></strong> solved "<em>What's in the box?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:37] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>What's in the box?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:37] <strong><a href="/profiles/189">Maverick</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:36] <strong><a href="/profiles/189">Maverick</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:36] <strong><a href="/profiles/175">Hlali</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:36] <strong><a href="/profiles/155">Melody</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:36] <strong><a href="/profiles/189">Maverick</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:35] <strong><a href="/profiles/181">Citybicycle</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 11:35] <strong><a href="/profiles/181">Citybicycle</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:34] <strong><a href="/profiles/181">Citybicycle</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:32] <strong><a href="/profiles/181">Citybicycle</a></strong> solved "<em>Workshop</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:32] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:32] <strong><a href="/profiles/141">NotJP</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:31] <strong><a href="/profiles/181">Citybicycle</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:31] <strong><a href="/profiles/129">Autobot</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:31] <strong><a href="/profiles/189">Maverick</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:31] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:31] <strong><a href="/profiles/181">Citybicycle</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:31] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:31] <strong><a href="/profiles/181">Citybicycle</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:30] <strong><a href="/profiles/175">Hlali</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:30] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:30] <strong><a href="/profiles/188">Ori-oreo</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:30] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:30] <strong><a href="/profiles/181">Citybicycle</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:30] <strong><a href="/profiles/159">TheChalkController</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:29] <strong><a href="/profiles/144">ReaperCrew</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:29] <strong><a href="/profiles/181">Citybicycle</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:29] <strong><a href="/profiles/187">Letho</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:29] <strong><a href="/profiles/144">ReaperCrew</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:29] <strong><a href="/profiles/166">BigDataDave</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:29] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:29] <strong><a href="/profiles/163">jfunction</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:29] <strong><a href="/profiles/187">Letho</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:28] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:28] <strong><a href="/profiles/181">Citybicycle</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:27] <strong><a href="/profiles/141">NotJP</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:27] <strong><a href="/profiles/186">EastAfricanTechGuy</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:27] <strong><a href="/profiles/187">Letho</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:27] <strong><a href="/profiles/129">Autobot</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:27] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:27] <strong><a href="/profiles/186">EastAfricanTechGuy</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:26] <strong><a href="/profiles/185">Anonymous#185</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:25] <strong><a href="/profiles/108">SkippyPeanut</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:23] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:23] <strong><a href="/profiles/183">Sloth</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:22] <strong><a href="/profiles/181">Citybicycle</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:22] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:22] <strong><a href="/profiles/179">EdgeRunner</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:22] <strong><a href="/profiles/173">Evern Julius</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:22] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:21] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:21] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:21] <strong><a href="/profiles/129">Autobot</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:21] <strong><a href="/profiles/155">Melody</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:21] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:20] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:20] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:19] <strong><a href="/profiles/181">Citybicycle</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:19] <strong><a href="/profiles/181">Citybicycle</a></strong> solved "<em>What's in the box?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:18] <strong><a href="/profiles/180">Kingbravo</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:18] <strong><a href="/profiles/182">Nankie🐾</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:18] <strong><a href="/profiles/181">Citybicycle</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:17] <strong><a href="/profiles/180">Kingbravo</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:16] <strong><a href="/profiles/105">Q @ Cyberlinx Security</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:16] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:16] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Art thou a hacker?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:15] <strong><a href="/profiles/180">Kingbravo</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:13] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:13] <strong><a href="/profiles/106">HandsomeJack</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:12] <strong><a href="/profiles/108">SkippyPeanut</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:07] <strong><a href="/profiles/106">HandsomeJack</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:06] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:05] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:05] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:05] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:05] <strong><a href="/profiles/178">Crabnuts</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:05] <strong><a href="/profiles/178">Crabnuts</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:05] <strong><a href="/profiles/179">EdgeRunner</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 11:04] <strong><a href="/profiles/178">Crabnuts</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:04] <strong><a href="/profiles/118">BlackSheep</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:04] <strong><a href="/profiles/170">SynStalker</a></strong> completed the "<a href="/challenges/2">Social Media Flags</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 11:04] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>81 Days is plenty time, right?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:04] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Can you start me up Win95?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:04] <strong><a href="/profiles/176">Alphonso</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:04] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>A call for papers</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:02] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:01] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>81 Days is plenty time, right?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:01] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>81 Days is plenty time, right?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:01] <strong><a href="/profiles/165">Robert</a></strong> completed the "<a href="/challenges/2">Social Media Flags</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 11:00] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Can you start me up Win95?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:00] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:00] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Can you start me up Win95?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 11:00] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:59] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:59] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:58] <strong><a href="/profiles/143">Litchi</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:58] <strong><a href="/profiles/178">Crabnuts</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 10:57] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>A call for papers</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:57] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>A call for papers</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:56] <strong><a href="/profiles/124">Aztech1069</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:56] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Limited Edition Hoodie</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:56] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:56] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:55] <strong><a href="/profiles/177">nimar</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 10:55] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:55] <strong><a href="/profiles/169">J3</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:55] <strong><a href="/profiles/163">jfunction</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:54] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>The Office Double Agent</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:54] <strong><a href="/profiles/157">Ashley</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:54] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Tickets on sale!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:53] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>A tree of links!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:53] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Sponsors!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:52] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Art thou a hacker?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:51] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:51] <strong><a href="/profiles/174">Pho3nix</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:51] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>Tickets on sale!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:50] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>The Office Double Agent</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:50] <strong><a href="/profiles/124">Aztech1069</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:50] <strong><a href="/profiles/174">Pho3nix</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:50] <strong><a href="/profiles/157">Ashley</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:50] <strong><a href="/profiles/165">Robert</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 10:50] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:50] <strong><a href="/profiles/142">Daniel P</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:50] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:50] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:50] <strong><a href="/profiles/174">Pho3nix</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:50] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:50] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:50] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:49] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:49] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:49] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:49] <strong><a href="/profiles/174">Pho3nix</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:48] <strong><a href="/profiles/176">Alphonso</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:47] <strong><a href="/profiles/157">Ashley</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:47] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>Can you start me up Win95?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:47] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:47] <strong><a href="/profiles/153">Wrathza</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 10:47] <strong><a href="/profiles/138">Anon1</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:46] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>81 Days is plenty time, right?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:46] <strong><a href="/profiles/138">Anon1</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:46] <strong><a href="/profiles/176">Alphonso</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 10:45] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:45] <strong><a href="/profiles/138">Anon1</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:44] <strong><a href="/profiles/175">Hlali</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 10:44] <strong><a href="/profiles/142">Daniel P</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:43] <strong><a href="/profiles/155">Melody</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:43] <strong><a href="/profiles/170">SynStalker</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 10:43] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:43] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:43] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:43] <strong><a href="/profiles/143">Litchi</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:43] <strong><a href="/profiles/142">Daniel P</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:42] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:42] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:42] <strong><a href="/profiles/155">Melody</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:42] <strong><a href="/profiles/143">Litchi</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:42] <strong><a href="/profiles/108">SkippyPeanut</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:41] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:41] <strong><a href="/profiles/105">Q @ Cyberlinx Security</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:41] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:41] <strong><a href="/profiles/141">NotJP</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 10:41] <strong><a href="/profiles/141">NotJP</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:40] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:40] <strong><a href="/profiles/141">NotJP</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:39] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:39] <strong><a href="/profiles/144">ReaperCrew</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:39] <strong><a href="/profiles/141">NotJP</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:39] <strong><a href="/profiles/129">Autobot</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:39] <strong><a href="/profiles/129">Autobot</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 10:39] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:39] <strong><a href="/profiles/155">Melody</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:38] <strong><a href="/profiles/174">Pho3nix</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:38] <strong><a href="/profiles/150">Cornelis </a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 10:38] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:38] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:37] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:37] <strong><a href="/profiles/129">Autobot</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:37] <strong><a href="/profiles/174">Pho3nix</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 10:37] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:37] <strong><a href="/profiles/129">Autobot</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:37] <strong><a href="/profiles/141">NotJP</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:36] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:36] <strong><a href="/profiles/142">Daniel P</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:36] <strong><a href="/profiles/129">Autobot</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:36] <strong><a href="/profiles/173">Evern Julius</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 10:36] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:36] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:35] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:35] <strong><a href="/profiles/163">jfunction</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:35] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:34] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:33] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:33] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:33] <strong><a href="/profiles/75">Glasscold</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 10:32] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:32] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:30] <strong><a href="/profiles/172">Vanilson</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 10:28] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:28] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:27] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:27] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Quicket Ticket</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:26] <strong><a href="/profiles/105">Q @ Cyberlinx Security</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:26] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:26] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:23] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:23] <strong><a href="/profiles/128">nadedjk</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:21] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>Ready Speaker 1</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:21] <strong><a href="/profiles/170">SynStalker</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:21] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:21] <strong><a href="/profiles/128">nadedjk</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:20] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>Ready Speaker 1</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:20] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>Golden Ticket</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:20] <strong><a href="/profiles/169">J3</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:19] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:19] <strong><a href="/profiles/15">PawnStar</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:18] <strong><a href="/profiles/118">BlackSheep</a></strong> solved "<em>Ready Speaker 1</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:18] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:17] <strong><a href="/profiles/125">Trojan</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:17] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:17] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>Ready Speaker 3</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:16] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>The Office Double Agent</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:15] <strong><a href="/profiles/163">jfunction</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:13] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Tickets on sale!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:13] <strong><a href="/profiles/170">SynStalker</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 10:09] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>A tree of links!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:05] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:04] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:03] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>A tree of links!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:03] <strong><a href="/profiles/106">HandsomeJack</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:03] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Sponsors!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 10:02] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Sponsors!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:58] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:58] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Art thou a hacker?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:57] <strong><a href="/profiles/157">Ashley</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:57] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:57] <strong><a href="/profiles/168">Christian </a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:57] <strong><a href="/profiles/15">PawnStar</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:56] <strong><a href="/profiles/169">J3</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:55] <strong><a href="/profiles/169">J3</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:55] <strong><a href="/profiles/168">Christian </a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:54] <strong><a href="/profiles/166">BigDataDave</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:54] <strong><a href="/profiles/167">Car</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:54] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Quicket Ticket</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:54] <strong><a href="/profiles/143">Litchi</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:54] <strong><a href="/profiles/166">BigDataDave</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:54] <strong><a href="/profiles/151">CodeHunter</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:53] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:53] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:53] <strong><a href="/profiles/141">NotJP</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:53] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>a Speaker flag</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:50] <strong><a href="/profiles/165">Robert</a></strong> solved "<em>Quicket Ticket</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:48] <strong><a href="/profiles/165">Robert</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:46] <strong><a href="/profiles/106">HandsomeJack</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:45] <strong><a href="/profiles/106">HandsomeJack</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:39] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:38] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:37] <strong><a href="/profiles/157">Ashley</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:37] <strong><a href="/profiles/157">Ashley</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:36] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:36] <strong><a href="/profiles/163">jfunction</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:36] <strong><a href="/profiles/162">upstairsdave</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:35] <strong><a href="/profiles/162">upstairsdave</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:33] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:33] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:32] <strong><a href="/profiles/161">Blessing🖥</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:32] <strong><a href="/profiles/161">Blessing🖥</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:31] <strong><a href="/profiles/139">Hapunkey</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:28] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:28] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:27] <strong><a href="/profiles/153">Wrathza</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:27] <strong><a href="/profiles/159">TheChalkController</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:24] <strong><a href="/profiles/159">TheChalkController</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:23] <strong><a href="/profiles/158">Dustydoolittle</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:23] <strong><a href="/profiles/156">SHAINE</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:22] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:22] <strong><a href="/profiles/157">Ashley</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:21] <strong><a href="/profiles/156">SHAINE</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:20] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:20] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:19] <strong><a href="/profiles/139">Hapunkey</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 09:19] <strong><a href="/profiles/139">Hapunkey</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:19] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:17] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>Ready Speaker 1</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:17] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Ready Speaker 1</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:17] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:14] <strong><a href="/profiles/155">Melody</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:13] <strong><a href="/profiles/144">ReaperCrew</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:13] <strong><a href="/profiles/139">Hapunkey</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:12] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>Ready Speaker 1</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:12] <strong><a href="/profiles/144">ReaperCrew</a></strong> solved "<em>Ready Speaker 1</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:11] <strong><a href="/profiles/139">Hapunkey</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:11] <strong><a href="/profiles/120">rowAnomaly</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 09:11] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:10] <strong><a href="/profiles/153">Wrathza</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:10] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Ready Speaker 1</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:09] <strong><a href="/profiles/152">chef291277</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:08] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:08] <strong><a href="/profiles/151">CodeHunter</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:08] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:08] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:08] <strong><a href="/profiles/123">Tiaan</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 09:07] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:07] <strong><a href="/profiles/125">Trojan</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:07] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:07] <strong><a href="/profiles/125">Trojan</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:06] <strong><a href="/profiles/141">NotJP</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:06] <strong><a href="/profiles/150">Cornelis </a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:05] <strong><a href="/profiles/105">Q @ Cyberlinx Security</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:05] <strong><a href="/profiles/150">Cornelis </a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:04] <strong><a href="/profiles/105">Q @ Cyberlinx Security</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:04] <strong><a href="/profiles/105">Q @ Cyberlinx Security</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:04] <strong><a href="/profiles/149">H</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:04] <strong><a href="/profiles/148">Anonymous#148</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:03] <strong><a href="/profiles/147">Anonymous#147</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:03] <strong><a href="/profiles/141">NotJP</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:03] <strong><a href="/profiles/145">Anonymous#145</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:03] <strong><a href="/profiles/119">Rafique Railoun</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 09:03] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:03] <strong><a href="/profiles/129">Autobot</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:03] <strong><a href="/profiles/138">Anon1</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:02] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:02] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:02] <strong><a href="/profiles/138">Anon1</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:02] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:02] <strong><a href="/profiles/144">ReaperCrew</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/105">Q @ Cyberlinx Security</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/135">Gerhard</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/135">Gerhard</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/138">Anon1</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/135">Gerhard</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/129">Autobot</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/118">BlackSheep</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 09:00] <strong><a href="/profiles/118">BlackSheep</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 08:59] <strong><a href="/profiles/141">NotJP</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:59] <strong><a href="/profiles/139">Hapunkey</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:59] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:59] <strong><a href="/profiles/143">Litchi</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:59] <strong><a href="/profiles/139">Hapunkey</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:58] <strong><a href="/profiles/142">Daniel P</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:58] <strong><a href="/profiles/139">Hapunkey</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:58] <strong><a href="/profiles/140">Nowyousimi</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:58] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Ready Speaker 3</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:58] <strong><a href="/profiles/141">NotJP</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:57] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>Ready Speaker 3</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:57] <strong><a href="/profiles/138">Anon1</a></strong> solved "<em>Ready Speaker 3</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:57] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>Ready Speaker 3</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:57] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Ready Speaker 3</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:57] <strong><a href="/profiles/118">BlackSheep</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:57] <strong><a href="/profiles/139">Hapunkey</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:57] <strong><a href="/profiles/129">Autobot</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:57] <strong><a href="/profiles/118">BlackSheep</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:57] <strong><a href="/profiles/135">Gerhard</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:57] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:56] <strong><a href="/profiles/128">nadedjk</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:56] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:56] <strong><a href="/profiles/140">Nowyousimi</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:56] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:56] <strong><a href="/profiles/138">Anon1</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:56] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:55] <strong><a href="/profiles/108">SkippyPeanut</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 08:55] <strong><a href="/profiles/108">SkippyPeanut</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:55] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:55] <strong><a href="/profiles/135">Gerhard</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:55] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:55] <strong><a href="/profiles/139">Hapunkey</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:55] <strong><a href="/profiles/135">Gerhard</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:55] <strong><a href="/profiles/108">SkippyPeanut</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:55] <strong><a href="/profiles/108">SkippyPeanut</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:54] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:54] <strong><a href="/profiles/125">Trojan</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:54] <strong><a href="/profiles/124">Aztech1069</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-12-02 08:54] <strong><a href="/profiles/124">Aztech1069</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:54] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:54] <strong><a href="/profiles/138">Anon1</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:54] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:54] <strong><a href="/profiles/135">Gerhard</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:53] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:53] <strong><a href="/profiles/118">BlackSheep</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:53] <strong><a href="/profiles/138">Anon1</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:53] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>Quicket Ticket</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:52] <strong><a href="/profiles/136">Noice</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:52] <strong><a href="/profiles/137">Zeecleaner</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:52] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:52] <strong><a href="/profiles/136">Noice</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:51] <strong><a href="/profiles/135">Gerhard</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:51] <strong><a href="/profiles/108">SkippyPeanut</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:51] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:51] <strong><a href="/profiles/118">BlackSheep</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:50] <strong><a href="/profiles/125">Trojan</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:50] <strong><a href="/profiles/134">8BitAcorn</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:50] <strong><a href="/profiles/124">Aztech1069</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:50] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:50] <strong><a href="/profiles/108">SkippyPeanut</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:50] <strong><a href="/profiles/124">Aztech1069</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:50] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:49] <strong><a href="/profiles/133">Anonymous#133</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:49] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:49] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:49] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:49] <strong><a href="/profiles/124">Aztech1069</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:48] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:48] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:47] <strong><a href="/profiles/131">Hugo Agenbag</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:47] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:47] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:46] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:46] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:45] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>It's not inside, it's on top!</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:45] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:45] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:44] <strong><a href="/profiles/125">Trojan</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:44] <strong><a href="/profiles/129">Autobot</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:44] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:44] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:44] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:44] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:44] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:44] <strong><a href="/profiles/125">Trojan</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:44] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:44] <strong><a href="/profiles/128">nadedjk</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:43] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:43] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>Ready Speaker 1</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:43] <strong><a href="/profiles/125">Trojan</a></strong> solved "<em>Golden Ticket</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:42] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>Golden Ticket</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:42] <strong><a href="/profiles/108">SkippyPeanut</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:41] <strong><a href="/profiles/126">Deez</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:41] <strong><a href="/profiles/125">Trojan</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:41] <strong><a href="/profiles/118">BlackSheep</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:39] <strong><a href="/profiles/126">Deez</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:39] <strong><a href="/profiles/125">Trojan</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:39] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Terrace</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:38] <strong><a href="/profiles/124">Aztech1069</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:38] <strong><a href="/profiles/124">Aztech1069</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:37] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>Golden Ticket</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:37] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:37] <strong><a href="/profiles/124">Aztech1069</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:37] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>Ready Speaker 3</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:37] <strong><a href="/profiles/123">Tiaan</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:37] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Workshop</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:36] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:36] <strong><a href="/profiles/108">SkippyPeanut</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:36] <strong><a href="/profiles/119">Rafique Railoun</a></strong> solved "<em>Golden Ticket</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:35] <strong><a href="/profiles/108">SkippyPeanut</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:35] <strong><a href="/profiles/123">Tiaan</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:35] <strong><a href="/profiles/122">CodeHunter</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:34] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:34] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Golden Ticket</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:33] <strong><a href="/profiles/120">rowAnomaly</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:33] <strong><a href="/profiles/118">BlackSheep</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:33] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:33] <strong><a href="/profiles/120">rowAnomaly</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:32] <strong><a href="/profiles/119">Rafique Railoun</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:32] <strong><a href="/profiles/118">BlackSheep</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:32] <strong><a href="/profiles/118">BlackSheep</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:31] <strong><a href="/profiles/117">leon808</a></strong> solved "<em>Golden Ticket</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:31] <strong><a href="/profiles/117">leon808</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:29] <strong><a href="/profiles/115">tag_souhail</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:29] <strong><a href="/profiles/114">Anonymous#114</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:26] <strong><a href="/profiles/112">Anonymous#112</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:23] <strong><a href="/profiles/81">atrooper.</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:20] <strong><a href="/profiles/108">SkippyPeanut</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:18] <strong><a href="/profiles/107">Fundermonkey</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:18] <strong><a href="/profiles/108">SkippyPeanut</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:17] <strong><a href="/profiles/108">SkippyPeanut</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:13] <strong><a href="/profiles/107">Fundermonkey</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 08:06] <strong><a href="/profiles/106">HandsomeJack</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:04] <strong><a href="/profiles/106">HandsomeJack</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 08:03] <strong><a href="/profiles/106">HandsomeJack</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 07:55] <strong><a href="/profiles/105">Q @ Cyberlinx Security</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 07:51] <strong><a href="/profiles/15">PawnStar</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-02 07:49] <strong><a href="/profiles/105">Q @ Cyberlinx Security</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-02 07:14] <strong><a href="/profiles/15">PawnStar</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 20:44] <strong><a href="/profiles/101">am03bam4n</a></strong> solved "<em>A tree of links!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 20:41] <strong><a href="/profiles/101">am03bam4n</a></strong> solved "<em>Art thou a hacker?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 20:37] <strong><a href="/profiles/101">am03bam4n</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-01 15:32] <strong><a href="/profiles/89">Anonymous#89</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-01 15:25] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Found MissingNo</em>"</li>
+      
+        <li class="list-group-item">[2023-12-01 15:22] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Its a Trap! (lose 10 points)</em>"</li>
+      
+        <li class="list-group-item">[2023-12-01 15:01] <strong><a href="/profiles/81">atrooper.</a></strong> solved "<em>Can you start me up Win95?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 14:59] <strong><a href="/profiles/81">atrooper.</a></strong> solved "<em>The Office Double Agent</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 14:54] <strong><a href="/profiles/81">atrooper.</a></strong> solved "<em>Tickets on sale!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 14:52] <strong><a href="/profiles/81">atrooper.</a></strong> solved "<em>A call for papers</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 14:46] <strong><a href="/profiles/81">atrooper.</a></strong> solved "<em>Sponsors!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 14:22] <strong><a href="/profiles/81">atrooper.</a></strong> solved "<em>Quicket Ticket</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 14:19] <strong><a href="/profiles/81">atrooper.</a></strong> solved "<em>A tree of links!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 14:16] <strong><a href="/profiles/81">atrooper.</a></strong> solved "<em>81 Days is plenty time, right?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 13:52] <strong><a href="/profiles/81">atrooper.</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-12-01 13:45] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>By Your Powers Combined</em>" of "<a href="/challenges/4">Activities</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 12:34] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>But can you scan this?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 12:15] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>"They're trashing our rights"</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 11:45] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>RIP Strauss :(</em>"</li>
+      
+        <li class="list-group-item">[2023-12-01 11:18] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Is that... a QR Code?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 10:21] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>81 Days is plenty time, right?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 10:18] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>Can you start me up Win95?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 10:17] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>A tree of links!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 09:09] <strong><a href="/profiles/75">Glasscold</a></strong> solved "<em>Quicket Ticket</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-12-01 09:06] <strong><a href="/profiles/75">Glasscold</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-11-30 09:22] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>Tickets on sale!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-30 09:19] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>A call for papers</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-30 09:17] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>The Office Double Agent</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-30 09:10] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>81 Days is plenty time, right?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-30 09:07] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>Can you start me up Win95?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-30 08:53] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>Quicket Ticket</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-30 08:49] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>Sponsors!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-30 08:43] <strong><a href="/profiles/69">LexiOfBorg</a></strong> solved "<em>Art thou a hacker?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-30 08:10] <strong><a href="/profiles/69">LexiOfBorg</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-11-29 14:41] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Took over a TV (network?)</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-11-29 14:18] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>(0x)Coffee</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-11-28 10:45] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>What's in the box?</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 23:02] <strong><a href="/profiles/7">mooncake</a></strong> completed the "<a href="/challenges/2">Social Media Flags</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-11-18 23:01] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Art thou a hacker?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 23:00] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Sponsors!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 23:00] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>81 Days is plenty time, right?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 23:00] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Quicket Ticket</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 23:00] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>The Office Double Agent</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 23:00] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>A call for papers</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 22:59] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Tickets on sale!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 22:59] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>A tree of links!</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 22:59] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Can you start me up Win95?</em>" of "<a href="/challenges/2">Social Media Flags</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 12:38] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Orange Cyberdefense</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 12:38] <strong><a href="/profiles/7">mooncake</a></strong> completed the "<a href="/challenges/3">Sponsor Booths</a>" challenge!</li>
+      
+        <li class="list-group-item">[2023-11-18 12:36] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>NClose</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 12:34] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Obscure</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 12:33] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Tenable</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 12:33] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>OfferZen</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 12:30] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Ready Speaker 3</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 12:28] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Assemble a QR Code</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 12:27] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Golden Ticket</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 12:27] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Volunteers Help</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 12:26] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Ready Speaker 2</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 12:25] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Ready Speaker 1</em>" of "<a href="/challenges/1">QR Codes</a>"</li>
+      
+        <li class="list-group-item">[2023-11-18 12:10] <strong><a href="/profiles/7">mooncake</a></strong> solved "<em>Cybereason</em>" of "<a href="/challenges/3">Sponsor Booths</a>"</li>
+      
+        <li class="list-group-item">[2023-09-01 15:01] <strong><a href="/profiles/19">cuchulainZA</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-08-28 00:02] <strong><a href="/profiles/17">apexxor</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-08-25 10:18] <strong><a href="/profiles/15">PawnStar</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-08-25 05:54] <strong><a href="/profiles/9">professorblack</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-08-24 20:41] <strong><a href="/profiles/8">PawnStar</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-08-24 19:45] <strong><a href="/profiles/7">mooncake</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-08-05 21:28] <strong><a href="/profiles/3">AngusRed#1337</a></strong> registered</li>
+      
+        <li class="list-group-item">[2023-08-01 10:04] <strong><a href="/profiles/1">Hypn</a></strong> registered</li>
+      
+    </ul>
+  </div>
+  <div class="card-arrow">
+    <div class="card-arrow-top-left"></div>
+    <div class="card-arrow-top-right"></div>
+    <div class="card-arrow-bottom-left"></div>
+    <div class="card-arrow-bottom-right"></div>
+  </div>
+</div>
+
+
+		</div>
+		<!-- END #content -->
+
+		<!-- BEGIN btn-scroll-top -->
+		<a href="#" data-toggle="scroll-to-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+		<!-- END btn-scroll-top -->
+	</div>
+	<!-- END #app -->
+
+	<!-- ================== BEGIN core-js ================== -->
+	<script src="/assets/js/vendor.min.js"></script>
+	<script src="/assets/js/app.min.js"></script>
+	<!-- ================== END core-js ================== -->
+
+	<!-- ================== BEGIN page-js ================== -->
+	<!-- ================== END page-js ================== -->
+</body>
+</html>
